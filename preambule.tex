@@ -1,0 +1,64 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[frenchb]{babel}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{graphicx}
+\usepackage{verbatim}
+\usepackage{enumitem, xcolor}
+\usepackage{eurosym}
+\usepackage{setspace}
+\usepackage{appendix}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{fancyvrb}
+\usepackage[toc, xindy, acronym]{glossaries}
+\usepackage{tabularx}
+\usepackage{ltxtable}
+\usepackage{pifont}
+\usepackage{textcomp}
+\usepackage{xparse}
+
+\newcommand*{\newdualentry}[5][]{
+	\newglossaryentry{gls-#2}{name={#4},
+		text={#3\glsadd{#2}},
+		description={#5},
+		#1
+	}
+\newacronym{#2}{#3\glsadd{gls-#2}}{#4}
+}
+
+%\DeclareDocumentCommand{\newdualentry}{O{} O{} m m m m m}{
+%	\newglossaryentry{gls-#3}{	name={#5},
+%								text={#5\glsadd{#3}},
+%								description={#6},
+%								#1}
+%	\makeglossaries
+%	\newacronym[see={[Glossary:]{gls-#3}}, #2]{#3}{#4}{#5\glsadd{gls-#3}}
+%}
+\pagestyle{fancy}
+\newcommand{\verbatimfont}[1]{\renewcommand{\verbatim@font}{\ttfamily#1}}
+\renewcommand{\headrulewidth}{1pt}
+\newcommand\tab[1][1cm]{\hspace*{#1}}
+\fancyhead[L]{Gaël Sagon}
+\fancyhead[R]{Stage Ingénieur}
+\setitemize[0]{label=\textcolor{red}{\ding{226}}}
+\renewcommand{\footrulewidth}{1pt}
+\fancyfoot[C]{
+\textbf{Page \thepage/\pageref{LastPage}}}
+\fancyfoot[R]{\today}
+
+\renewcommand{\glspluralsuffix}{}
+\renewcommand{\thesection}{\Roman{section}} 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\renewcommand{\thesubsection}{\arabic{subsection}} 
+\makeglossaries
+\newcolumntype{M}[1]{>{\centering\arraybackslash}m{#1}}
+
+\author{SAGON Gaël}
+\title{\textbf{Rapport Stage Ingénieur}}
+\date{Août 2018}

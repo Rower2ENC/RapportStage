@@ -1,0 +1,29 @@
+\begin{longtable}{|>{\setlength{\hsize}{.7\hsize}}X|>{\setlength{\hsize}{.8\hsize}}X|>{\setlength{\hsize}{1.8\hsize}}X|>{\setlength{\hsize}{.7\hsize}}X|}
+	\hline
+	Données& Description& Valeurs possibles& Mode\\
+	\hline\hline
+	
+	Name &Type de la trace technique&
+	Prend la valeur :\begin{itemize}
+		\item LogInfo
+		\item LogWarning
+		\item LogError
+		\item LogSuccess
+	\end{itemize} &Consultation\\
+\hline Message&Un message ou un commentaire&&Consultation\\
+	\hline
+	Message code& Identifiant du point de passage &
+	\begin{minipage}[t]{\hsize}
+			\begin{itemize}
+			\item PFGE\_IN:Entrée d'un message, d'une requête ou d'un fichier dans HUBIC 
+			\item PFGE\_OUT : Sortie d'un message,d'une requête ou d'un fichier de HUBIC 
+			\item PFGE\_R\_IN : Entrée d'une réponse de HUBIC 
+			\item PFGE\_R\_OUT : Sortie d'une réponse de HUBIC 
+			\item <NOM TRAITEMENT> : Nom du traitement interne de HUBIC en cas d'erreur interne ou de point de passage intermédiaire 
+		\end{itemize}
+		\end{minipage}
+&
+	Consultation\\
+	\hline
+	Eventdatetime&Durée du traitement du flux&Date au format "hh :mm.ss.fff+hh :mm aaaa-mm-jj"&Consultation\\\hline
+	\end{longtable}
