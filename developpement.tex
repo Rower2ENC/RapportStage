@@ -38,8 +38,7 @@ de flux (un émetteur, plusieurs destinataires), modification éventuelle de for
 protocole. HUBIC assure également la traçabilité autant technique que fonctionnelle des
 échanges, la gestion des erreurs et les possibilités de rejeu.
 \end{itemize}
-Pour se faire une meilleure idée, le diagramme des flux de HUBIC est représenté en figures 3a et
-3b ci-dessous. Pour ne pas surcharger ce rapport, seul un unique traitement de flux sera décrit
+Pour se faire une meilleure idée, le diagramme des flux de HUBIC est représenté en figures \ref{} et \ref{} ci-dessous. Pour ne pas surcharger ce rapport, seul un unique traitement de flux sera décrit
 sur les 54 existants actuellement. Prenons le traitement entre GAIA et DECLIC.
 Commençons par les flux concernés. Actuellement sont concernés les flux FT031, FT032, FT033,
 FT214, FT215, FT216, FT217, FT218, FT219, FT220, FT221, FT222.
@@ -58,7 +57,7 @@ interroge les services offerts par GAIA au travers de cette demi-interface.
 Le seul cas d'utilisation est la consommation d'un service GAIA. Ce qui nous donne le schéma
 des cas d'utilisation suivant en figure \ref{scu} :\begin{figure}[h!]
 	\centering
-	\includegraphics[width=0.7\linewidth]{d:/Profiles/gsagon/Desktop/Rapport/RapportStage/img/encours}
+	\includegraphics[width=0.7\linewidth]{img/encours.png}
 	\caption{Schéma des cas d'utilisation des services GAIA}
 	\label{scu}
 \end{figure}
@@ -77,7 +76,7 @@ Par exemple, pour appeler un service GAIA exposé avec un bouchon, on utilise l'
 https://localhost:9992/referentiel/infrastructure/gaia/v2/gares/xml
 La réponse est un fichier XML formaté comme la réponse attendue pour chaque flux. Ce fichier
 est ensuite modifié si nécessaire et envoyé à l'application consommatrice. Tout le processus
-d'échange pour le flux FT084 est donné en figure \ref ci-dessous
+d'échange pour le flux FT084 est donné en figure \ref{} ci-dessous
 Les messages échangés actuellement sont les PR, les TypeStructure et les gares, avec un mapping à l'identique, c'est à dire que le message de sortie de GAIA et celui d'entrée de DECLIC
 doivent être formatés de la même manière, avec le même \gls{xsd}. Le module correspondant est
 donc un "passe-plat", il ne modifie rien.
@@ -88,7 +87,7 @@ L'identifiant d'un flux est une donnée unique et propre à chaque processus de 
 flux. Cet identifiant est sous la forme FTxxx. Un nouveau flux implique donc de définir de façon
 définitive un identifiant de flux pour ce traitement.
 La distinction entre les messages d'un flux s'effectue sur leur identifiant de message.
-L'écran en figure 8 est composé de 4 vues :
+L'écran en figure \ref{} est composé de 4 vues :
 \begin{enumerate}
 	\item La vue principale : contient la liste de toutes les traces d'un point de vue technique.
 	 \item Le menu : permet de choisir les types de flux à visualiser. \item La vue événements/processus : Contient la liste des historiques d'une trace sélectionnée dans la vue principale. \item La vue détail : contient les détails/propriétés d'une trace ou d'un historique sélectionné
@@ -98,20 +97,21 @@ Les informations affichées sont les suivantes :\\
 \noindent
 \begin{tabularx}{\textwidth}{|c|M{4cm}|X|M{4cm}|}
 	\hline
+	\rowcolor{red}
 	Données& Description& Valeurs possibles& Mode\\\hline\hline
-	Process Path&
+	\rowcolor{grisFonce}Process Path&
 	Chemin du process qui exécute le flux dans TIBCO&
 	Un chemin& Consultation\\
-	\hline
+	\rowcolor{gris}\hline
 	Process Name&
 	Nom du process qui exécute le flux dans TIBCO&
 	Un nom& Consultation\\
-	\hline
+\rowcolor{grisFonce}	\hline
 	Job Start&
 	Horodate d'entrée dans HUBIC&
 	Data au format "hh :mm.ss.fff+hh :mm aaaa-mm-jj"&
 	Consultation\\
-	\hline
+	\rowcolor{gris}\hline
 	MS&
 	Durée du traitement du flux&
 	Une durée en millisecondes& Consultation\\
@@ -161,7 +161,7 @@ Cette fenêtre est constituée de plusieurs onglets :
 	partagée pour un "Get Shared Variable", entre autres)
 	\item Input Editor : Plus souvent présent pour les "Mapper", c'est l'onglet qui permet
 	de donner la composition de l'entrée de l'activité, le plus souvent, un XML Schema
-	Definition (XSD), ou un contrat fait à la main. Ci-dessous, en figure 14a et 14b, la
+	Definition (XSD), ou un contrat fait à la main. Ci-dessous, en figure \ref{} et \ref{}, la
 	différence entre les 2.
 	\item Input : Après avoir formaté l'entrée de l'activité, il faut que l'entrée soit valide. Pour
 	cela, il faut mapper les sorties des activités précédentes ou les variables globales aux

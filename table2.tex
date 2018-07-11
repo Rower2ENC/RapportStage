@@ -1,50 +1,50 @@
 \begin{longtable}{|>{\setlength{\hsize}{.8\hsize}}X|>{\setlength{\hsize}{.8\hsize}}X|>{\setlength{\hsize}{1.6\hsize}}X|>{\setlength{\hsize}{.8\hsize}}X|}
-	\hline
+	\hline	\rowcolor{red}
 	Données& Description& Valeurs possibles& Mode\\
-	\hline\hline
-	\multicolumn{4}{|c|}{Attribute} \\
+	\hline\hline	\rowcolor{blue}
+	\multicolumn{4}{|c|}{Attribute} \\\hline	\rowcolor{grisFonce}
 	AppIn& Identifiant de l'application émettrice&
 	Identifiant de l'application émettrice&
-	Consultation\\\hline
+	Consultation\\\hline\rowcolor{gris}
 	
 	AppPointPassage& Identifiant de l'application par où est passé le message
 	&Identifiant de l'application par où est passé le message, ou "PFGE" en cas d'erreur interne ou de point de passage intermédiaire
-	&Consultation\\\hline
+	&Consultation\\\hline\rowcolor{grisFonce}
 	
 	AppOut& Identifiant de l'application destinatrice
 	&Identifiant de l'application destinatrice
-	&Consultation\\\hline
+	&Consultation\\\hline\rowcolor{gris}
 	
 	nbElements& Nombre d'éléments transférés dans un message
-	&Un entier& Consultation\\\hline
+	&Un entier& Consultation\\\hline\rowcolor{grisFonce}
 	
-	Niveau& Niveau de traces& Un entier (0, 1, 2 ou 3)& Consultation\\\hline
-	 Type&&& Consultation\\\hline
+	Niveau& Niveau de traces& Un entier (0, 1, 2 ou 3)& Consultation\\\hline\rowcolor{gris}
+	 Type&&& Consultation\\\hline\rowcolor{grisFonce}
 	
 	typePointAccesEntree& Protocole utilisé dans ce flux&
-	REST, SOAP, JMS, ... &Consultation\\\hline
+	REST, SOAP, JMS, ... &Consultation\\\hline\rowcolor{gris}
 	
 	UrlAccesPointEntree& Le point d'accès à ce flux& Elle dépend du protocole utilisé. Ça peut être une URL dans les cas REST, nom d'une queue dans les cas JMS, ...
-	&Consultation\\\hline
+	&Consultation\\\hline\rowcolor{grisFonce}
 	
-	Volume& Taille du message&& Consultation\\\hline
-	CodeErreur& Code d'erreur si erreur& Code erreur issus des DIT& Consultation\\\hline
-	dateValidite& La date de validité du message& Date au format "hh :mm.ss.fff+hh :mm aaaa-mm-jj" &Consultation\\\hline
-	Rejouable& Le flux est-il rejouable?& Boolean& Consultation\\\hline
-	traitementErreur &Nom du processus qui est tombé en erreur&& Consultation \\\hline
-	\multicolumn{4}{|c|}{Properties}\\\hline
-	Business Service& Identifiant du flux &Identifiants du flx issus des DIT& Consultation\\\hline
-	Business Object& Données métier portées par le flux& Données métier issues des DIT &Consultation\\\hline
-	Job Start& Horodate de début du job dans BusinessWork& Date au format "hh :mm.ss.fff+hh :mm aaaa-mm-jj"& Consultation\\\hline
-	Job End& Horodate de fin du job dans BusinessWorks& Date au format "hh :mm.ss.fff+hh :mm aaaa-mm-jj" &Consultation \\
-	Business Start& Horodate de début du processus qui a traité le flux &Date au format "hh :mm.ss.fff+hh :mm aaaa-mm-jj"& Consultation \\\hline
-	Business End &Horodate de fin du processus qui a traité le flux &Date au format "hh :mm.ss.fff+hh :mm aaaa-mm-jj" &Consultation \\\hline
-	Duration (ms) &La durée d'exécution& Nombre en millisecondes& Consultation \\\hline
-	Machine name& Nom de l'instance en charge du traitement& Nom de l'instance BusinessWorks en charge du traitement &Consultation \\\hline
-	Job ID &Identifiant du job qui a traité le message& Identifiants numériques& Consultation \\\hline
-	Log ID &Identifiant du job qui a traité le message& Identifiants numériques& Consultation \\\hline
-	Correlation ID& Identifiant de la trace technique& Identifiants& Consultation \\\hline
-	Parent Log ID &Identifiant d'une trace parent &Identifiants &Consultation \\\hline
+	Volume& Taille du message&& Consultation\\\hline\rowcolor{gris}
+	CodeErreur& Code d'erreur si erreur& Code erreur issus des DIT& Consultation\\\hline\rowcolor{grisFonce}
+	dateValidite& La date de validité du message& Date au format "hh :mm.ss.fff+hh :mm aaaa-mm-jj" &Consultation\\\hline\rowcolor{gris}
+	Rejouable& Le flux est-il rejouable?& Boolean& Consultation\\\hline\rowcolor{grisFonce}
+	traitementErreur &Nom du processus qui est tombé en erreur&& Consultation \\\hline\rowcolor{blue}
+	\multicolumn{4}{|c|}{Properties}\\\hline\rowcolor{gris}
+	Business Service& Identifiant du flux &Identifiants du flx issus des DIT& Consultation\\\hline\rowcolor{grisFonce}
+	Business Object& Données métier portées par le flux& Données métier issues des DIT &Consultation\\\hline\rowcolor{gris}
+	Job Start& Horodate de début du job dans BusinessWork& Date au format "hh :mm.ss.fff+hh :mm aaaa-mm-jj"& Consultation\\\hline\rowcolor{grisFonce}
+	Job End& Horodate de fin du job dans BusinessWorks& Date au format "hh :mm.ss.fff+hh :mm aaaa-mm-jj" &Consultation \\\hline\rowcolor{gris}
+	Business Start& Horodate de début du processus qui a traité le flux &Date au format "hh :mm.ss.fff+hh :mm aaaa-mm-jj"& Consultation \\\hline\rowcolor{grisFonce}
+	Business End &Horodate de fin du processus qui a traité le flux &Date au format "hh :mm.ss.fff+hh :mm aaaa-mm-jj" &Consultation \\\hline\rowcolor{gris}
+	Duration (ms) &La durée d'exécution& Nombre en millisecondes& Consultation \\\hline\rowcolor{grisFonce}
+	Machine name& Nom de l'instance en charge du traitement& Nom de l'instance BusinessWorks en charge du traitement &Consultation \\\hline\rowcolor{gris}
+	Job ID &Identifiant du job qui a traité le message& Identifiants numériques& Consultation \\\hline\rowcolor{grisFonce}
+	Log ID &Identifiant du job qui a traité le message& Identifiants numériques& Consultation \\\hline\rowcolor{gris}
+	Correlation ID& Identifiant de la trace technique& Identifiants& Consultation \\\hline\rowcolor{grisFonce}
+	Parent Log ID &Identifiant d'une trace parent &Identifiants &Consultation \\\hline\rowcolor{gris}
 	External Log ID& Identifiant externe &Identifiants &Consultation\\\hline
 	\end{longtable}
 	        

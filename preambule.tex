@@ -1,4 +1,5 @@
 \documentclass[12pt,a4paper]{article}
+%\DisemulatePackage{tabularx}
 \usepackage[utf8]{inputenc}
 \usepackage[frenchb]{babel}
 \usepackage[T1]{fontenc}
@@ -9,7 +10,7 @@
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
 \usepackage{graphicx}
 \usepackage{verbatim}\usepackage{setspace}
-%\usepackage{appendix}
+\usepackage{appendix}
 \usepackage{fancyhdr}
 \usepackage{lastpage}
 \usepackage{fancyvrb}
@@ -20,8 +21,9 @@
 \usepackage{textcomp}
 \usepackage{xparse}
 
-\usepackage{enumitem, xcolor}
-%\usepackage{eurosym}
+\usepackage{enumitem}
+\usepackage{eurosym}
+\usepackage[table]{xcolor}
 
 \newcommand*{\newdualentry}[5][]{
 	\newglossaryentry{gls-#2}{name={#4},
@@ -51,7 +53,8 @@
 \fancyfoot[C]{
 \textbf{Page \thepage/\pageref{LastPage}}}
 \fancyfoot[R]{\today}
-
+\definecolor{gris}{RGB}{231,231,231}
+\definecolor{grisFonce}{RGB}{160,160,160}
 \renewcommand{\glspluralsuffix}{}
 \renewcommand{\thesection}{\Roman{section}} 
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
