@@ -45,11 +45,24 @@ Commençons par les flux concernés. Actuellement sont concernés les flux FT031
 FT214, FT215, FT216, FT217, FT218, FT219, FT220, FT221, FT222.
 Ce traitement s'effectue sous la forme d'une invocation de service à l'initiative de DECLIC.
 L'application GAIA offre 25 services tels que les lignes, les communes, les départements, les
-plus courts chemins,... Ces services sont sur la figure 4 ci-dessous
+plus courts chemins,... Ces services sont sur la figure \ref{services} ci-dessous
+\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{img/encours}
+	\caption{Services offerts par HUBIC à destination de DINAMIC}
+	\label{services}
+\end{figure}
+
 Le seul acteur du domaine est le moteur de traitement des flux, c'est l'élément du HUBIC qui
 interroge les services offerts par GAIA au travers de cette demi-interface.
 Le seul cas d'utilisation est la consommation d'un service GAIA. Ce qui nous donne le schéma
-des cas d'utilisation suivant en figure 5 :
+des cas d'utilisation suivant en figure \ref{scu} :\begin{figure}[h!]
+	\centering
+	\includegraphics[width=0.7\linewidth]{d:/Profiles/gsagon/Desktop/Rapport/RapportStage/img/encours}
+	\caption{Schéma des cas d'utilisation des services GAIA}
+	\label{scu}
+\end{figure}
+
 Penchons-nous maintenant sur la structure des échanges de publication.
 Les services sont identifiés avec un nom composé du nom de flux dans la matrice des flux, du
 nom de l'application concernée par la demi-interface, un terme contextuel permettant de situer
@@ -61,7 +74,7 @@ https://{Env.DomaineSociété}/{DomaineMetier}/{version}/{ressource}/{format}
 \end{verbatim}
 
 Par exemple, pour appeler un service GAIA exposé avec un bouchon, on utilise l'URL suivante :
-https ://localhost :9992/referentiel/infrastructure/gaia/v2/gares/xml
+https://localhost:9992/referentiel/infrastructure/gaia/v2/gares/xml
 La réponse est un fichier XML formaté comme la réponse attendue pour chaque flux. Ce fichier
 est ensuite modifié si nécessaire et envoyé à l'application consommatrice. Tout le processus
 d'échange pour le flux FT084 est donné en figure \ref ci-dessous
@@ -232,13 +245,13 @@ utilisateurs de l'IHM. Je l'ai surtout utilisé pour les livraisons.
 %	\centering
 %\end{figure}\newpage
 \subsection{Activités effectuées}
-Après avoir passé près de 2 semaines à lire de la documanetation sur l'entreprise et sur
+Après avoir passé près de 2 semaines à lire de la documentation sur l'entreprise et sur
 le projet HUBIC Pendant mon stage, j'ai travaillé sur une machine virtuelle CentOS. CentOS
 (Community enterprise Operating System) est une distribution Linux stable, prévisible, gérable
 et reproductive dérivée des sources et binairement compatible avec Red Hat Enterprise Linux.
 Elle est également utilisée par 20\% des serveurs web Linux, ce qui en fait la 3e distribution
 mondiale pour les serveurs web Linux.
-\subsubsection{Prise en main de TIBCO Designer}
+\subsubsection{Prise en main de la plateforme d'intégration TIBCO ActiveMatrix BusinessWorks}
 J'ai pu prendre en main TIBCO 5 et TIBCO Designer lors de mon transfert de connaissances
 sur Meudon-la-Forêt, après lecture de beaucoup de documentation. J'ai commencé par
 comprendre comment la plupart des activités fonctionnaient et comment les paramétrer. Travaillant
